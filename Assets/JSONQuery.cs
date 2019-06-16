@@ -17,6 +17,7 @@ public class JSONQuery : MonoBehaviour
 			if (replacePlaceholders) {
 				result = Utils.FillTemplateFromJObject(property.value, data);
 			} else {
+				Debug.Log(property.value);
 				result = (string)data.SelectToken(property.value);
 			}
 

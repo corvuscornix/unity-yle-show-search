@@ -8,10 +8,6 @@ using UnityEngine;
 public class Utils : MonoBehaviour
 {
 
-	public void DebugPrint(Vector2 vector) {
-		Debug.Log("scrolling: " + vector);
-	}
-
 	/*
 	 * Replace all the placeholders (text within square brackets) with matching properties from incoming data.
 	 */

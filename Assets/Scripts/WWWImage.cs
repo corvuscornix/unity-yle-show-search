@@ -2,10 +2,12 @@
 using System.Collections;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class WWWImage : MonoBehaviour
 {
 	public string url;
+	public UnityEvent onLoad;
 
 	IEnumerator Start() {
 		if (url.Length > 0) {
@@ -19,6 +21,7 @@ public class WWWImage : MonoBehaviour
 					Texture2D texture = DownloadHandlerTexture.GetContent(webRequest);
 
 					image.sprite = Sprite.Create(texture, new Rect(0.0f, 0.0f, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100.0f);
+					onLoad.Invoke();
 				}
 			}
 		}

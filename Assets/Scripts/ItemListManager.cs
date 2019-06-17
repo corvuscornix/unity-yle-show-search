@@ -32,7 +32,7 @@ public class ItemListManager : MonoBehaviour
 			GameObject item = Instantiate(itemTemplate, itemTemplate.transform.parent);
 			item.GetComponentInChildren<TextMeshProUGUI>(true).text = record.title.fi;
 			if (record.image != null && record.image.id != null) {
-				item.GetComponentInChildren<WWWImage>(true).url = Utils.FillTemplateFromJObject(squareImageUrlTemplate.value, record);
+				item.GetComponentInChildren<WWWImage>(true).url = Utils.FillTemplateFromJObject(squareImageUrlTemplate.value, record, true);
 			}
 			Button button = item.GetComponentInChildren<Button>();
 			button.onClick.AddListener(() => {

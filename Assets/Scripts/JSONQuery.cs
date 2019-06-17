@@ -1,15 +1,16 @@
 ﻿using Newtonsoft.Json.Linq;
 using System.Collections;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class JSONQuery : MonoBehaviour
 {
 	public StringProperty property;
 	public bool replacePlaceholders = false;
 	public UnityStringEvent resultHandler;
+
+	/*
+	 * Reads a given JSON property (uses JPath syntax) from input data or if replacePlaceHolders is enabled, replaces all properties inside square brackets.
+	 */
 	public void Run(dynamic data) {
 
 		if (data is JObject && resultHandler != null) {

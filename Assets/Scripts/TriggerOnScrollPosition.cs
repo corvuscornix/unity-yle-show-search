@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class TriggerOnScrollPosition : MonoBehaviour
 {
-	[Tooltip("Trigger position in percent from the bottom of the list")]
+	[Tooltip("Trigger position in percents from the bottom of the list")]
 	public int triggerTresholdInPercent;
 	public bool resetTriggerOnContentChange = true;
 	public UnityEvent OnScrollPosition;
@@ -16,16 +14,21 @@ public class TriggerOnScrollPosition : MonoBehaviour
 
 	private void Start() {
 		ScrollRect scrollRect = GetComponent<ScrollRect>();
-		float triggerPosition = this.triggerTresholdInPercent / 100f;
+		float triggerPositionNormalized = this.triggerTresholdInPercent / 100f;
 		scrollRect.onValueChanged.AddListener((Vector2 vector) => {
-			float relativePosition = (scrollRect.content.rect.height * scrollRect.verticalNormalizedPosition) / scrollRect.content.rect.height;
+			float relativePositionNormalized = (scrollRect.content.rect.height * scrollRect.verticalNormalizedPosition) / scrollRect.content.rect.height;
 
-			if (relativePosition < triggerPosition && (lastPosition > triggerPosition || resetTriggerOnContentChange && contentHeight != scrollRect.content.rect.height)) {	
+			/*
+			 * Trigger OnScrollPosition event if
+			 * 1) scroll position of current content height is less than trigger position threshold and
+			 * 2) resetTriggerOnContentChange is disabled or content height has changed since last iteration
+			 */
+			if (relativePositionNormalized < triggerPositionNormalized && (lastPosition > triggerPositionNormalized || resetTriggerOnContentChange && contentHeight != scrollRect.content.rect.height)) {	
 				OnScrollPosition.Invoke();
 			}
 
 			contentHeight = scrollRect.content.rect.height;
-			lastPosition = relativePosition;
+			lastPosition = relativePositionNormalized;
 		});
 
 		contentHeight = scrollRect.content.rect.height;

@@ -1,15 +1,11 @@
 ﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class Utils : MonoBehaviour
 {
-
 	/*
-	 * Replace all the placeholders (text within square brackets) with matching properties from incoming data.
+	 * Replace all the placeholders (text within square brackets) with matching properties from incoming data. Uses JPath syntax.
 	 */
 	internal static string FillTemplateFromJObject(string fillTemplate, JObject data, bool nullIfNoValue = false) {
 

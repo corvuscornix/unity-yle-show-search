@@ -4,6 +4,9 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
+/*
+ * Loads an image from a given url and loads it into an attached Image component. Triggers an event when image is succesufully loaded.
+ */
 public class WWWImage : MonoBehaviour
 {
 	public string url;

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -27,16 +25,16 @@ public class WebRequest : MonoBehaviour
 	}
 
 	public void SetPage(int page) {
-		this.offset = page * pageSize;
+		offset = page * pageSize;
 	}
 
 	public void SetNextPage() {
-		this.offset += pageSize;
+		offset += pageSize;
 	}
 
 	public void SetPreviousPage() {
-		this.offset -= pageSize;
-		if (this.offset < 0) this.offset = 0;
+		offset -= pageSize;
+		if (offset < 0) offset = 0;
 	}
 
 	public void Send() {

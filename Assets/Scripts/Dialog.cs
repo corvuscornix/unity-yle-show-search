@@ -29,14 +29,14 @@ public class Dialog : MonoBehaviour {
 		if (!preventDefault) {
 			EnableCanvas();
 		}
-		Debug.Log("open");
+
 		onOpen.Invoke();
 	}
 
 	public void Close(bool preventDefault = false) {
 
 		if (!IsOpened) return;
-		Debug.Log("close");
+
 		IsOpened = false;
 
 		if (!preventDefault) {
@@ -48,7 +48,6 @@ public class Dialog : MonoBehaviour {
 
 	public void DisableCanvas() {
 		GetComponent<Canvas>().enabled = false;
-		Debug.Log("disable");
 	}
 
 	public void EnableCanvas() {

@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class Dialog : MonoBehaviour {
+
+	public UnityEvent onOpen, onClose;
+
 	private CanvasGroup canvasGroup;
 
 	public bool IsOpened { get; internal set; }
@@ -18,24 +22,33 @@ public class Dialog : MonoBehaviour {
 		DisableCanvas();
 	}
 
-	public void Open() {
+	public void Open(bool preventDefault = false) {
 
 		IsOpened = true;
 
-		EnableCanvas();
+		if (!preventDefault) {
+			EnableCanvas();
+		}
+		Debug.Log("open");
+		onOpen.Invoke();
 	}
 
-	public void Close() {
+	public void Close(bool preventDefault = false) {
 
 		if (!IsOpened) return;
-
+		Debug.Log("close");
 		IsOpened = false;
 
-		DisableCanvas();
+		if (!preventDefault) {
+			DisableCanvas();
+		}
+
+		onClose.Invoke();
 	}
 
 	public void DisableCanvas() {
 		GetComponent<Canvas>().enabled = false;
+		Debug.Log("disable");
 	}
 
 	public void EnableCanvas() {

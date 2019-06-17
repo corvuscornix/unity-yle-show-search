@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f1cfe35ca229f3489a66511ae37e4a7, type: 3}
-  m_Name: CreatorInfo
+  m_Name: ListItemThumbnailImageUrl
   m_EditorClassIdentifier: 
-  value: 'Creator: [creator[0].name]'
+  value: https://images.cdn.yle.fi/image/upload/w_80,h_80,c_fill/[image.id].jpg

@@ -4,8 +4,6 @@ using UnityEngine.Events;
 [System.Serializable]
 public class UnityDynamicEvent : UnityEvent<dynamic> { }
 
-[CreateAssetMenu]
-public class GameEventDynamic : GameEvent<dynamic> { };
 
 public class GameEventListenerDynamicArg : GameEventListener<dynamic>
 {

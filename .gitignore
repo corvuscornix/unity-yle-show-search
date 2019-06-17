@@ -1,3 +1,5 @@
+!/Assets/Libraries/*.dll
+
 # =============== #
 # Unity generated #
 # =============== #
@@ -31,19 +33,5 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 [Tt]humbs.db
-marbelous_Data/
 *.db.meta
-bouncy_Data/
-Assets/Plugins/Sirenix/
-Assets/GitIgnored/
-Assets/Plugins/Demigiant/
-Assets/Plugins/Demigiant.meta
-Assets/Demigiant/
-Assets/Sirenix/
-Assets/Demigiant.meta
-Assets/TextMesh Pro/
-Assets/TextMesh Pro.meta
 .gradle/
-Assets/Plugins/Sirenix.meta
-Assets/Plugins/UnityPurchasing/
-Assets/GitIgnored.meta

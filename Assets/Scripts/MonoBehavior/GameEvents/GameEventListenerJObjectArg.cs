@@ -5,9 +5,6 @@ using UnityEngine.Events;
 [System.Serializable]
 public class UnityJObjectEvent : UnityEvent<JObject> { }
 
-[CreateAssetMenu]
-public class GameEventJObject : GameEvent<JObject> { };
-
 public class GameEventListenerJObjectArg : GameEventListener<JObject>
 {
 	public GameEventJObject Event;

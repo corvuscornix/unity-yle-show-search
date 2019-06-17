@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: ce5f629d3b0f8fd4c81039167ef6bf99, type: 3}
   m_Name: SearchSubmitted
-  m_EditorClassIdentifier: Assembly-CSharp::GameEventString
+  m_EditorClassIdentifier: 

@@ -4,9 +4,6 @@ using UnityEngine.Events;
 [System.Serializable]
 public class UnityStringEvent : UnityEvent<string> { }
 
-[CreateAssetMenu]
-public class GameEventString : GameEvent<string> { };
-
 public class GameEventListenerStringArg : GameEventListener<string>
 {
 	public GameEventString Event;

@@ -366,18 +366,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 33214983}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 916901420}
-        m_MethodName: openDialog
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &33214986
@@ -3349,7 +3338,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 943.0002, y: 0}
+  m_SizeDelta: {x: 943.2597, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1273387749
 MonoBehaviour:
@@ -4474,7 +4463,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 234357746}
   m_HandleRect: {fileID: 234357745}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

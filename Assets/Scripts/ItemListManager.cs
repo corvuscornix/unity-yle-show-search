@@ -7,7 +7,7 @@ public class ItemListManager : MonoBehaviour
 {
 	public StringProperty squareImageUrlTemplate;
 	public GameObject itemTemplate;
-	public GameEventJObject itemSelected;
+	public GameEventJObject onItemSelected;
 
 	public void Start() {
 		if (itemTemplate.activeSelf) {
@@ -34,7 +34,7 @@ public class ItemListManager : MonoBehaviour
 			}
 			Button button = item.GetComponentInChildren<Button>();
 			button.onClick.AddListener(() => {
-				itemSelected.Invoke(record);
+				onItemSelected.Invoke(record);
 			});
 			item.SetActive(true);
 		}
